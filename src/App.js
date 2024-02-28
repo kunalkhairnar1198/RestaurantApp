@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Header from "./Component/UI/Header/Header";
+import Header from "./Component/Layout/Header/Header";
 import Meals from "./Component/Meals/Meals";
 
 function App() {
