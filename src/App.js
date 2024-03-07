@@ -20,7 +20,7 @@ function App(props) {
 
   return (
     <CartProvider>
-      {IsshowCart && <Cart onCardIsDisable={CartIsDisable} />}
+      {IsshowCart && <Cart onClose={CartIsDisable} />}
       <Header onShowCart={CartIsVisible}/>
           <main>
             <Meals/>

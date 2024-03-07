@@ -7,17 +7,23 @@ const HeaderButtonCart = (props) => {
 
   const cartCtx = useContext(CartContext)
 
-  const numberOfCartItem = cartCtx.items.reduce((curNumber,item)=>{
-    return curNumber + item.amount
-  },0);
-  
+  // const numberOfCartItem = cartCtx.items.reduce((curNumber,item)=>{
+  //   return curNumber + parseInt(item.amount)
+  // },0);
+
+  let quantity = 0;
+   cartCtx.items.forEach(item =>{
+    quantity = quantity + Number(item.quantity)
+  })
+
   return (
     <button className={cartBtn.button} onClick={props.onClick}>
       <span className={cartBtn.icon}>
         <CartIcon /> 
       </span>
       <span>Your Cart</span>
-      <span className={cartBtn.badge}>{numberOfCartItem}</span>
+      <span>{cartCtx.message}</span>
+      <span className={cartBtn.badge}>{quantity}</span>
     </button>
   )
 };

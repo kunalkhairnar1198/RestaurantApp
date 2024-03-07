@@ -6,7 +6,7 @@ import HeaderButtonCart from './HeaderButtonCart'
 
 function Header(props) {
 
-   console.log('Header compponent',props)
+  //  console.log('Header compponent',props)
 
   return (
     <React.Fragment>
